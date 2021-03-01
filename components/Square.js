@@ -8,16 +8,22 @@ import Kinetic from "./Kinetic"
 
 const kin = new Kinetic();
 
-export default function Square(size){
-    
-    let com = size/2;
-    
-    console.log(size.children);
+export default function Square(props){
 
+    let size = 0;
+    // console.log(props)
+    if(props.size){
+        size = props.size;
+    }
+    
     return(
-        <Kinetic>
-            <div>
-                {size.children}
+        <Kinetic size={size}>
+            <div style={{
+                border: "2px solid red",
+                width: size,
+                height: size
+            }}>
+                Testing
             </div>
         </Kinetic>
     )
