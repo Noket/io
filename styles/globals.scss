@@ -26,3 +26,14 @@ img {
   max-width: 100%;
   display: block;
 }
+
+.kinetic{
+  border: 1px solid green;
+  background-color: red;
+  display: inline-flex;
+  z-index: -100;
+  flex-direction: row;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
