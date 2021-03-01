@@ -7,11 +7,9 @@ export class Kinetic extends React.Component{
     constructor(args){
         super()
         this.props = args
-        this.props.style.top = "0px";
-        this.props.style.left = "0px";
-        console.log("kintetic constructor")
-        console.log(this.props)
-        // this.render.bind(this);
+        // this.props.style.top = "0px";
+        // this.props.style.left = "0px";
+        // // this.render.bind(this);
     }
 
     render(){
