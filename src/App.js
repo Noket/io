@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import Circle from "./components/Circle"
+import { Square } from "./components/Square"
 
 function App() {
   return (
@@ -17,7 +19,11 @@ function App() {
         >
           Learn React
         </a>
+
       </header>
+      <main>
+      <Square size="80">Working now finally?</Square>
+      </main>
     </div>
   );
 }

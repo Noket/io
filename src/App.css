@@ -5,12 +5,18 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-self: start;
+  top: 0px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+@media all {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    animation: 
+      App-logo-spin infinite 2s ease-in-out;
+    }
 }
 
 .App-header {
@@ -29,10 +35,24 @@
 }
 
 @keyframes App-logo-spin {
-  from {
+  0% {
     transform: rotate(0deg);
+    top: 0%;
+    left: 15%;
   }
-  to {
+  25% {
     transform: rotate(360deg);
+    top: 25%;
+    left: 25%;
+  }
+  50% {
+    transform: rotate(720deg);
+    top: 35%;
+    left: 70%;
+  }
+  100% {
+    transform: rotate(0deg);
+    top: 0%;
+    left: 15%;
   }
 }
