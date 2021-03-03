@@ -1,5 +1,7 @@
 .self {
     display: flex;
+    text-overflow: clip;
+    overflow: hidden;
     flex-direction: row;
     align-items: center;
     justify-content: center;
