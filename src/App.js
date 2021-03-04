@@ -4,6 +4,12 @@ import { Circle } from "./components/Shapes/Circle"
 import { Square } from "./components/Shapes/Square"
 import { Rectangle } from "./components/Shapes/Rectangle"
 
+// window.addEventListener("pointermove",listener=>{
+//   console.log("x:"+listener.x);
+//   console.log("y:"+listener.y);
+  
+// })
+
 function App() {
   return (
     <div className="App">
@@ -39,14 +45,17 @@ function App() {
           justifyContent: "space-around",
           flexWrap: "wrap"
         }}>
-          <Square size="80">Working now finally?</Square>
-          <Square size="90">Working now finally?</Square>
-          <Circle size="300">Added a circle!</Circle>
-          <Square size="20">Working now finally?</Square>
-          <Square size="50">Working now finally?</Square>
-          <Rectangle height="700" width="200">Oh wow a rectangle too!</Rectangle>
-          <Square size="120">Working now finally?</Square>
-          <Square size="180">Working now finally?</Square>
+          <Square size="80px">Working now finally?</Square>
+          {/* <Square id="tester" size="90px"></Square>
+          <Circle size="300px">Added a circle!</Circle>
+          <Square size="20px">Working now finally?</Square>
+          <Square size="400px" style={{
+            alignSelf: "end"
+            }}>{JSON.stringify(window.MouseEvent)}</Square>
+          <Square size="50px">Working now finally?</Square>
+          <Rectangle height="700px" width="200px">Oh wow a rectangle too!</Rectangle>
+          <Square size="120px">Working now finally?</Square>
+          <Square size="180px">Working now finally?</Square> */}
 
         </div>
       </main>

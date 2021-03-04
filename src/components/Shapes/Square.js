@@ -9,25 +9,17 @@ import styles from "./square.module.css";
 
 export class Square extends React.Component{
 
-    constructor(args){
-        super()
-        this.props = {
-            size: args.size
-        }
-
+    constructor(props){
+        super(props)
+        this.ref = React.createRef();
     }
 
-    render(child){
+    render(){
 
         return(
-            <div className={styles.self} style={{
-                width: this.props.size+"px",
-                height: this.props.size+"px"
-            }}>
                 <Kinetic>
                     {this.props.children}
                 </Kinetic>
-            </div>
         )    
     }
 }

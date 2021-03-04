@@ -4,21 +4,17 @@ import styles from "./circle.module.css";
 
 export class Circle extends React.Component{
 
-    constructor(args){
-        super()
-        this.props = {
-            size: args.size
-        }
-
+    constructor(props){
+        super(props)
     }
 
-    render(child){
+    render(){
         console.log("props mar3")
         console.log(this.props)
         return(
             <div className={styles.self} style={{
-                width: this.props.size+"px",
-                height: this.props.size+"px",
+                width: this.props.size,
+                height: this.props.size
             }}>
                 <Kinetic>
                     {this.props.children}

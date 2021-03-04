@@ -9,20 +9,15 @@ import styles from './rectangle.module.css';
 
 export class Rectangle extends React.Component{
 
-    constructor(args){
-        super()
-        this.props = {
-            height: args.height,
-            width: args.width
-        }
-
+    constructor(props){
+        super(props)
     }
 
     render(){
         return(
             <div className={styles.self} styles={{
-                width: this.props.width+"px",
-                height: this.props.height+"px"
+                width: this.props.width,
+                height: this.props.height
             }}>
                 <Kinetic>
                     {this.props.children}
