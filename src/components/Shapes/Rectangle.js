@@ -11,6 +11,7 @@ export class Rectangle extends React.Component{
 
     constructor(props){
         super(props)
+        this.currentRef = React.createRef();
     }
 
     render(){
@@ -19,7 +20,7 @@ export class Rectangle extends React.Component{
                 width: this.props.width,
                 height: this.props.height
             }}>
-                <Kinetic>
+                <Kinetic parentRef={this}>
                     {this.props.children}
                 </Kinetic>
             </div>

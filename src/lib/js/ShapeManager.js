@@ -4,14 +4,26 @@
 
 function ShapeManager() {}
 
+window.onmousemove = event => {
+    ShapeManager.xpos = event.pageX;
+    ShapeManager.ypos = event.pageY;
+}
+
 ShapeManager.shapeList = new Array();
 ShapeManager.addShape = shape => {
     ShapeManager.shapeList.push(shape);
 }
-ShapeManager.getShapes = function() {
+ShapeManager.getShapes = () => {
     return ShapeManager.shapeList;
 }
 
-console.log(ShapeManager.getShapes());
+ShapeManager.currentX = () => {
+    return ShapeManager.xpos;
+}
+
+ShapeManager.currentY = () => {
+    return ShapeManager.ypos;
+}
+// console.log(ShapeManager.getShapes());
 
 export default ShapeManager;

@@ -11,15 +11,27 @@ export class Square extends React.Component{
 
     constructor(props){
         super(props)
-        this.ref = React.createRef();
+        // this.ref = React.createRef();
+        this.currentRef = null;
     }
 
     render(){
-
+        // console.log("props mar3")
+        console.log(this.props)
         return(
-                <Kinetic>
+            <div className={styles.self} style={{
+                width: this.props.size,
+                height: this.props.size
+            }}>
+                <Kinetic parentRef={this}>
                     {this.props.children}
                 </Kinetic>
+            </div>
         )    
+    }
+    componentDidMount(){
+        this.setState({
+            currentRef: React.createRef()
+        })
     }
 }

@@ -14,13 +14,14 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" 
+        {/* <img src={logo} className="App-logo" alt="logo" 
           style={{
             zIndex:2000
-          }}/>
+          }}/> */}
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+	
         
         <a
           className="App-link"
@@ -45,14 +46,17 @@ function App() {
           justifyContent: "space-around",
           flexWrap: "wrap"
         }}>
-          <Square size="80px">Working now finally?</Square>
-          {/* <Square id="tester" size="90px"></Square>
+          {/* <Square size="80px">I'm a square too!</Square>
+          <Square id="tester" size="90px"></Square>
           <Circle size="300px">Added a circle!</Circle>
-          <Square size="20px">Working now finally?</Square>
+          <Square size="20px">I'm a square!</Square> */}
           <Square size="400px" style={{
             alignSelf: "end"
-            }}>{JSON.stringify(window.MouseEvent)}</Square>
-          <Square size="50px">Working now finally?</Square>
+            }}>{
+                JSON.stringify(window.onmousemove)
+            
+            }</Square>
+          {/* <Square size="50px">Working now finally?</Square>
           <Rectangle height="700px" width="200px">Oh wow a rectangle too!</Rectangle>
           <Square size="120px">Working now finally?</Square>
           <Square size="180px">Working now finally?</Square> */}
